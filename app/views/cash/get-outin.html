@@ -1,0 +1,66 @@
+<form class="row">
+    <div class="form-group col-sm-4">
+        <label class="control-label">出入库状态</label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">出库</option>
+            <option value="2">入库</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">出库机构</label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">出库</option>
+            <option value="2">入库</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">入库机构</label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">出库</option>
+            <option value="2">入库</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">币种 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">人民币</option>
+            <option value="1">吉布提法郎</option>
+            <option value="1">美元</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">起止时间 <i class="fa fa-asterisk text-danger"></i></label>
+        <div class="form-inline">
+            <input type="date" class="form-control date-input">-
+            <input type="date" class="form-control date-input"> </div>
+    </div>
+    <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>查询</button>
+    </div>
+</form>
+<div class="form-group">
+    <div class="form-line"></div>
+</div> <span class="support-text">共查到 <em>20</em> 条</span>
+<table class="table table-bordered table-hover">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th>券别版本</th>
+            <th>完整券张数</th>
+            <th>全额损伤券张数</th>
+            <th>半额损伤券张数</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in classification">
+            <td> 1 </td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,112 @@
+<div class="widget">
+  <div class="widget-header bordered-bottom-1 bordered-blueberry"><h3 class="widget-caption">换折</h3></div>
+  <div class="widget-body ">
+    <form class="form-horizontal">
+
+      <!--默认获取-->
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>账号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="100100"/>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>客户姓名</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="尓除橘儿·良儿顿·莱茵"/>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" ng-model="member.num">
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>证件类型</label>
+        <div class="col-sm-7">
+          <select class="form-control" id="field2">
+            <option value="">请选择</option>
+            <option value="1">居民身份证</option>
+            <option value="2">居民户口本</option>
+            <option value="3">护照</option>
+            <option value="4">其他</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">证件号码</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">账户状态</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="未激活"/>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">开户日期</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="2016-07-18"/>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">余额</label>
+        <div class="col-sm-7">
+          <input type="text" disabled class="form-control" ng-value="0.00"/>
+        </div>
+      </div>
+      <div class="form-title col-sm-12"></div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>凭证号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="100100"/>
+        </div>
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>密码</label>
+        <div class="col-sm-7">
+          <input type="password" class="form-control">
+        </div>
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label"><em>*</em>换取原因</label>
+        <div class="col-sm-7">
+          <select class="form-control">
+            <option value="0">存折满页</option>
+            <option value="1">消磁</option>
+            <option value="3">坏损</option>
+            <option value="4">丢失</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-7">
+          <button type="button" class="btn btn-primary">提交</button>
+          <button type="button" class="btn btn-default">取消</button>
+        </div>
+      </div>
+
+      <!-- to-->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-7">
+          <button type="button" class="btn btn-info">打印</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

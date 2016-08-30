@@ -1,0 +1,30 @@
+<form class="login-wrapper animated fadeInDown" ng-submit="login()" name="form" novalidate>
+  <img src="../images/login/logo.png" alt="丝路国际银行" class="login-logo">
+  <div class="login-container">
+    <input type="text" class="hide" placeholder="账号">
+    <input type="password" class="hide" placeholder="账号">
+    <div class="loginbox-title">
+      <img src="../images/login/tit.png" alt="丝路国际银行">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-user"></i></span>
+      <input type="text" class="form-control" ng-model="user.name" name="username" required="" ng-minlength="1" placeholder="账号">
+      <div ng-show="form.$submitted || form.username.$touched">
+        <p class="text-danger" ng-show="form.username.$error.required">账号不能为空！</p>
+      </div>
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-key"></i></span>
+      <input type="password" class="form-control" ng-model="user.password" name="password" required="" ng-minlength="2" ng-maxlength="30" placeholder="密码">
+      <div ng-show="form.$submitted || form.password.$touched">
+        <p class="text-danger" ng-show="form.password.$invalid">密码为2-30个字符！</p>
+      </div>
+    </div>
+    <div class="form-group form-btn-group no-padding-bottom margin-top-20">
+      <button type="submit" class="btn btn-block" ng-disabled="form.$invalid">登录</button>
+      <div ng-show="form.$submitted">
+        <p class="alert-danger margin-top-10 padding-5" ng-show="user.infoError">用户名或密码错误！</p>
+      </div>
+    </div>
+  </div>
+</form>

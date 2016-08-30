@@ -1,0 +1,51 @@
+<form class="row">
+    <!--默认获取-->
+    <div class="form-group col-sm-4">
+        <label class="control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" value="10000000000" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">户名</label>
+        <input type="text" disabled class="form-control" value="尓除橘儿·良儿顿·莱茵" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">账号类型</label>
+        <input type="text" disabled class="form-control" value="储蓄卡" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">账户状态</label>
+        <input type="text" disabled class="form-control" value="未激活" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">开户日期</label>
+        <input type="text" disabled class="form-control" value="2016-07-18" /> </div>
+    <div class="form-group col-sm-12">
+        <div class="form-line"></div>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">冻结类型 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">司法冻结</option>
+            <option value="2">司法冻结</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">冻结方式 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control" ng-model="num">
+            <option value="">请选择</option>
+            <option value="1">定额冻结</option>
+            <option value="2">全额冻结</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4" ng-hide="num==2">
+        <label class="control-label">冻结金额 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" ng-value="0.00|currency:''" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">冻结到期日期 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="date" class="form-control" /> </div>
+    <div class="form-group col-sm-12">
+        <label class="control-label">冻结说明</label>
+        <textarea class="form-control" rows="3"></textarea>
+    </div>
+    <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary"><i class="fa fa-check-circle"></i> 提交</button>
+        <button type="button" class="btn btn-default"><i class="fa fa-times-circle"></i>取消</button>
+    </div>
+</form>

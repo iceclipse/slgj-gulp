@@ -1,0 +1,62 @@
+<form class="row">
+  <div class="form-group col-sm-4">
+    <label class="control-label">入库来源 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">上级行</option>
+      <option value="">下级行</option>
+      <option value="">印刷厂</option>
+      <option value="">其他</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">入库机构 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">机构1</option>
+      <option value="1">机构2</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">出库流水号 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">机构1</option>
+      <option value="1">机构2</option>
+    </select>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证类型</label>
+    <select class="form-control">
+      <option value="">对公凭证业务</option>
+      <option value="1">对私凭证业务</option>
+      <option value="1">中间业务凭证</option>
+      <option value="1">卡凭证</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证种类</label>
+    <select class="form-control">
+      <option value="">凭证1</option>
+      <option value="1">凭证2</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">批次 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control"/>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证起止号 <i class="fa fa-asterisk text-danger"></i></label>
+    <div class="form-inline">
+      <input type="text" class="form-control date-input"/> - <input type="text" class="form-control date-input"/>
+    </div>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">数量</label>
+    <input type="text" class="form-control" disabled/>
+  </div>
+
+  <div class="form-group col-sm-12 margin-top-10">
+    <button type="button" class="btn btn-primary">提交</button>
+    <button type="reset" class="btn btn-default">重置</button>
+  </div>
+</form>

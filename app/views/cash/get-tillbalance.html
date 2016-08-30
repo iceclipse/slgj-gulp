@@ -1,0 +1,50 @@
+<form class="row">
+    <div class="form-group col-sm-4">
+        <label class="control-label">柜员 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="1">张三</option>
+            <option value="2">张四</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">币种 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">人民币</option>
+            <option value="1">吉布提法郎</option>
+            <option value="1">美元</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>查询</button>
+    </div>
+</form>
+<div class="form-group">
+    <div class="form-line"></div>
+</div>
+<table class="table table-bordered">
+    <caption><span class="fa-pull-left font-2x">
+                尾箱余额: <em>30000</em>
+            </span></caption>
+    <thead>
+        <tr>
+            <th>券别版本</th>
+            <th>完整券张数</th>
+            <th>全额损伤券张数</th>
+            <th>半额损伤券张数</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="c in classification">
+            <td>
+                <!-- TODO: need to user control data -->
+                <input type="text" disabled ng-model="c.amount.name" class="form-control"> </td>
+            <td>
+                <input type="text" class="form-control" ng-model="c.complete"> </td>
+            <td>
+                <input type="text" class="form-control" ng-model="c.incomplete"> </td>
+            <td>
+                <input type="text" class="form-control" ng-model="c.halfcomplete"> </td>
+        </tr>
+    </tbody>
+</table>

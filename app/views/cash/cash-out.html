@@ -1,0 +1,92 @@
+<form class="row">
+    <div class="form-group col-sm-4">
+        <label class="control-label">现金去向 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="1">下级机构调款</option>
+            <option value="2">上级机构缴款</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">入库机构 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control" id="field2">
+            <option value="">请选择</option>
+            <option value="1">机构名称</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">出库金额 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" placeholder="必填项"> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">币种 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">人民币</option>
+            <option value="1">吉布提法郎</option>
+            <option value="1">美元</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">现金项目代码 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">其他单位工资性支出</option>
+            <option value="1">农副产品采购支出</option>
+            <option value="1">工矿及其他产品采购支出</option>
+            <option value="">行政企事业管理费支出</option>
+            <option value="">城乡个体经营支出</option>
+            <option value="">储蓄存款支出</option>
+            <option value="">其他金融机构支出</option>
+            <option value="">汇兑支出</option>
+            <option value="">其它支出</option>
+            <option value="">兑换外币支出</option>
+            <option value="">内部现金支出</option>
+            <option value="">同业往来支出</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-12">
+        <div class="form-line"></div>
+    </div>
+    <div class="form-group col-sm-12">
+        <table class="table table-bordered">
+            <caption>
+                <div class="form-inline pull-right">
+                    <lebal>选择券别</lebal>
+                    <select class="form-control" ng-model="selectedAmount" ng-options="amount as amount.name for amount in amounts"> </select> <a href class="btn btn-success btn-sm" ng-click="addClass()"><i class="fa fa-plus"></i>添加券别</a> </div> <span class="fa-pull-left font-2x">
+                总金额: <em>30000</em>
+            </span> </caption>
+            <thead>
+                <tr>
+                    <th>券别版本</th>
+                    <th>完整券张数</th>
+                    <th>全额损伤券张数</th>
+                    <th>半额损伤券张数</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="c in classification">
+                    <td>
+                        <!-- TODO: need to user control data -->
+                        <input type="text" disabled ng-model="c.amount.name" class="form-control"> </td>
+                    <td>
+                        <input type="text" class="form-control" ng-model="c.complete"> </td>
+                    <td>
+                        <input type="text" class="form-control" ng-model="c.incomplete"> </td>
+                    <td>
+                        <input type="text" class="form-control" ng-model="c.halfcomplete"> </td>
+                    <td><a ng-show="$index>0" href class="btn btn-danger btn-sm pull-right" ng-click="delClass($index)">删除</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary"><i class="fa fa-check-circle"></i>提交</button>
+        <button type="reset" class="btn btn-default"><i class="fa fa-history"></i>重置</button>
+    </div>
+    <div class="form-group col-sm-12 ">
+        <ul>
+            <li>授权:负责人签字,集中作业中心主任授权</li>
+            <li>打印:现金调拨凭证</li>
+        </ul>
+    </div>
+</form>

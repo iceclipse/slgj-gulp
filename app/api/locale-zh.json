@@ -1,0 +1,19 @@
+{
+   "TITLE":"综合柜面管理系统",
+   "PRINT":"打印",
+  "ACCOUNT":"账号",
+  "ACCOUNTID":"账户号",
+  "CREDENTIALSTYPE":"证件类型",
+  "CREDENTIALSID":"证件号",
+  "SELECT":"请选择",
+  "NAME":"姓名",
+  "PASSWORD":"密码",
+  "SEARCH":"查询",
+  "ACCOUNTTYPE":"账号类型",
+  "SUBACCOUNT":"子账户",
+  "TEL":"手机号",
+  "MATURITYTYPE":"存期",
+  "CURRENCY":"币种",
+  "SUBMIT":"提交",
+  "reset":"重置"
+ }

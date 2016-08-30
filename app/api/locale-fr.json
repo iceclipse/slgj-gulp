@@ -1,0 +1,19 @@
+{
+  "TITLE":"Système de gestion intégrée de compteur",
+  "PRINT":"imprimer",
+  "ACCOUNT":"compte",
+  "ACCOUNTID":"code d'identification de compte",
+  "CREDENTIALSTYPE":"pouvoirs de type",
+  "CREDENTIALSID":"pouvoirs id",
+  "SELECT":"choisir",
+  "NAME":"nom",
+  "PASSWORD":"mot de passe",
+  "SEARCH":"recherche",
+  "ACCOUNTTYPE":"type de compte",
+  "SUBACCOUNT":"le sous - compte",
+  "TEL":"tél.",
+  "MATURITYTYPE":"type de maturité",
+  "CURRENCY":"la monnaie",
+  "SUBMIT":"soumettre",
+  "reset":"reset"
+}

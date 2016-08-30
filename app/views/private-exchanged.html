@@ -1,0 +1,157 @@
+<h3 class="slide-header">换取个人凭证</h3>
+<form class="form-horizontal">
+
+  <!--默认获取-->
+  <div class="well">
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户号</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="100100" />
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户姓名</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="尓除橘儿·良儿顿·莱茵" />
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">凭证状态</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="未激活" />
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">凭证号</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="10000000000" />
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">开户日期</label>
+        <div class="col-sm-7">
+          <input type="text" readonly class="form-control" value="2016-07-18" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">凭证类型 <span class="help-block need-field">必选</span></label>
+    <div class="col-sm-7">
+      <select class="form-control">
+        <option value="">请选择</option>
+        <option value="1">储蓄卡</option>
+        <option value="2">存折</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">凭证号 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">卡号 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">交易类别 <span class="help-block need-field">必选</span></label>
+    <div class="col-sm-7">
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 本币账户
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 外币账户
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">币种 <span class="help-block need-field">必选</span></label>
+    <div class="col-sm-7">
+      <select class="form-control">
+        <option value="1">吉布提法郎</option>
+        <option value="2">美元</option>
+        <option value="3">人民币</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">钞汇标志 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <select class="form-control">
+        <option value="1">钞汇</option>
+        <option value="2">现汇</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">金额 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" ng-value="0.00" />
+    </div>
+  </div>
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">密码 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <input type="password" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">证件类型 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <select class="form-control" id="field2">
+        <option value="">请选择</option>
+        <option value="1">居民身份证</option>
+        <option value="2">居民户口本</option>
+        <option value="3">护照</option>
+        <option value="4">其他</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">证件号码 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group col-sm-6">
+    <label class="col-sm-4 control-label">换取原因 <span class="help-block need-field">必填</span></label>
+    <div class="col-sm-7">
+      <select class="form-control">
+        <option value="0">存折满页</option>
+        <option value="1">消磁</option>
+        <option value="3">坏损</option>
+        <option value="4">丢失</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-7">
+      <button type="button" class="btn btn-info">填单打印</button>
+      <button type="button" class="btn btn-primary">提交</button>
+      <button type="button" class="btn btn-default">取消</button>
+    </div>
+  </div>
+</form>

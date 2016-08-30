@@ -1,0 +1,64 @@
+<h3 class="slide-header">凭证状态恢复</h3>
+<form class="row">
+  <!--默认获取-->
+      <div class="form-group col-sm-4">
+        <label class="col-sm-4 control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+          <input type="text" class="form-control" value="10000000000" />
+      </div>
+      <div class="form-group col-sm-4">
+        <label class="col-sm-4 control-label">户名</label>
+          <input type="text" disabled class="form-control" value="" />
+      </div>
+
+
+
+    <table class="table table-bordered table-hover">
+      <caption>[张三的账户]已作废凭证列表<button type="button" class="btn btn-sm btn-primary pull-right">恢复</button></caption>
+      <thead>
+      <tr>
+        <th>选择</th>
+        <th>凭证号</th>
+        <th>批次</th>
+        <th>凭证类别</th>
+        <th>凭证种类</th>
+        <th>票据日期</th>
+        <th>备注</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><label><input type="checkbox"></label></td>
+        <td>00001</td>
+        <td>1</td>
+        <td>对公业务凭证</td>
+        <td>现金支票</td>
+        <td>2016-07-28</td>
+        <td>无</td>
+      </tr>
+      </tbody>
+    </table>
+
+
+  <div class="text-right margin-top-10">
+    <uib-pagination
+      total-items="bigTotalItems"
+      ng-model="bigCurrentPage"
+      max-size="maxSize"
+      class="pagination-sm"
+      first-text="首页"
+      last-text="尾页"
+      previous-text="上一页"
+      next-text="下一页"
+      items-per-page="20"
+      boundary-links="true"
+      force-ellipses="true"></uib-pagination>
+</div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-7">
+      <button type="button" class="btn btn-primary">提交</button>
+      <!--提交后  进入 收费页面-->
+      <button type="reset" class="btn btn-default">重置</button>
+    </div>
+  </div>
+</form>

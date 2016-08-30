@@ -1,0 +1,66 @@
+<form class="row">
+  <!--默认获取-->
+  <table class="table table-bordered table-hover">
+    <caption>出售凭证信息</caption>
+    <thead>
+    <tr>
+      <td>凭证类型</td><td>开始号码</td><td>结束号码</td><td>数量</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>现金支票</td><td></td><td></td><td>20</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="margin-top-30 clearfix">
+    <div class="form-group col-sm-4">
+      <label class="control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" value="10000000000" />
+    </div>
+
+
+    <div class="form-group col-sm-4">
+      <label class="control-label">凭证类型 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" value="" />
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">凭证号码 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" value="" />
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">凭证日期 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="date" class="form-control" value="" />
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">币种 <i class="fa fa-asterisk text-danger"></i></label>
+      <select class="form-control">
+        <option value="">吉布提法郎</option>
+        <option value="">人民币</option>
+      </select>
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label class="control-label">交易金额 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" ng-value="0.00|currency:''" />
+    </div>
+
+    <div class="form-group col-sm-4">
+      <label class="control-label">支付密码 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="password" class="form-control" />
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">用途 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" />
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">20万(含)以上审批人 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control"  />
+    </div>
+    <div class="form-group col-sm-12">
+      <button type="button" class="btn btn-primary">提交</button>
+      <button type="reset" class="btn btn-default">重置</button>
+    </div>
+  </div>
+</form>

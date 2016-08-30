@@ -1,0 +1,97 @@
+<div class="widget">
+  <div class="widget-header bordered-bottom-1 bordered-blueberry"><h3 class="widget-caption">机构详情</h3></div>
+  <div class="widget-body">
+
+    <form class="form-horizontal">
+      <div class="form-group col-md-6">
+        <label class="col-sm-4 control-label">机构编号:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organizeId}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构名称:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.name}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构简称:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.name}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构状态:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{['','未激活','激活'][organize.status]}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构级别:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{['总行','分行','支行'][organize.level]}}</p>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">所在地区:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.area}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构地址:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.address}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">联系人:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.person}}</p>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">联系电话:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.tel}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">清算机构号:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.liquidationId}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">地区编号:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.areaId}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">处理网点:</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organize.name}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label">机构描述:</label>
+        <p class="form-control-static">{{organize.desc}}</p>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-md-6">
+          <button type="button" class="btn btn-primary">提交</button>
+          <button type="button" class="btn btn-default">返回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!--机构简称-->
+<!---->
+<!--机构级别-->
+<!--机构状态-->
+<!--操作-->

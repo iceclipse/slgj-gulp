@@ -1,0 +1,130 @@
+<div class="row" ng-hide="isShowPrint">
+  <form name="form" ng-submit="add()" novalidate>
+    <div class="form-group col-sm-4">
+      <label class="control-label" translate="CREDENTIALSTYPE"></label>
+      <select class="form-control" ng-model="member.cardType" required ng-change="checkExist()">
+        <option value="">{{'SELECT' | translate}}</option>
+        <option value="1" ng-selected="member.cardType==1">居民身份证</option>
+        <option value="2" ng-selected="member.cardType==2">居民户口本</option>
+        <option value="3" ng-selected="member.cardType==3">护照</option>
+        <option value="4" ng-selected="member.cardType==4">其他</option>
+      </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">{{"CREDENTIALSID" | translate}} <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="number" class="form-control" ng-model="member.cardNum" placeholder="必填项" ng-change="checkExist()"
+             required></div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">{{"NAME" | translate}} <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control" ng-model="member.name" placeholder="必填项" ng-blur="checkExist()" required>
+    </div>
+    <div class="form-group col-sm-4">
+      <label class="control-label" translate="ACCOUNTID"></label>
+      <input type="text" class="form-control" ng-model="member.num" required></div>
+    <div class="form-group col-sm-4">
+      <label class="control-label" translate="TEL"></label>
+      <input type="text" disabled class="form-control" ng-model="member.tel" required/>
+    </div>
+    <div class="form-group col-sm-12">
+      <div class="form-line"></div>
+    </div>
+    <div class="clearfix" ng-hide="isShowAgree">
+      <!--默认获取-->
+      <div class="form-group col-sm-4 no-padding-top">
+        <label class="control-label">{{"ACCOUNT" | translate}} <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" placeholder="{{'ACCOUNT' | translate}}" ng-model="member.account" required></div>
+      <div class="form-group col-sm-4">
+        <label class="control-label" translate="ACCOUNTTYPE"></label>
+        <input type="text" disabled class="form-control" value="储蓄卡" ng-model="member.accountType"></div>
+      <div class="form-group col-sm-4">
+        <label class="control-label" translate="MATURITYTYPE"></label>
+        <input type="text" class="form-control" value="活期" ng-model="member.maturityType" disabled></div>
+      <div class="form-group col-sm-4">
+        <label class="control-label" translate="CURRENCY"></label>
+        <input type="text" disabled class="form-control" value="吉布提法郎" ng-model="member.currency"/></div>
+      <div class="form-group col-sm-4">
+        <label class="control-label">{{"PASSWORD" | translate}} <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="password" class="form-control" ng-model="member.password" required></div>
+      <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary" ng-click="isShowAgree = true"
+                ng-disabled="form.$invalid || member.password !== member.password2"><i class="fa fa-check-circle"></i> {{"SUBMIT" | translate}}
+        </button>
+        <button type="reset" class="btn btn-default"><i class="fa fa-history"></i>  {{"RESET" | translate}}</button>
+
+        <div ng-show="member.password !== member.password2 && member.password2">
+          <p class="alert-danger margin-top-10 padding-5">两次输入的密码不一致！</p>
+        </div>
+        <div ng-show="form.$submitted">
+          <p ng-class="{'alert-success':result.type=='succ','alert-danger':result.type!=='succ'}"
+             class="margin-top-10 padding-5" ng-show="result.type">{{result.msg}}</p>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <form class="clearfix" ng-show="isShowAgree" name="authForm">
+    <div class="form-group col-sm-4">
+      <label class="control-label"><em>*</em>授权账号</label>
+      <input type="text" class="form-control" required ng-model="auth.username"/></div>
+    <div class="form-group col-sm-4">
+      <label class="control-label"><em>*</em>授权密码</label>
+      <input type="password" class="form-control" required ng-model="auth.password"></div>
+    <div class="form-group col-sm-4">
+      <label class="control-label">拒绝原因</label>
+      <input type="text" class="form-control" ng-model="refuseTxt"></div>
+    <div class="form-group col-sm-12 margin-top-10">
+      <button type="button" class="btn btn-primary" ng-click="isShowPrint=true"  ng-disabled="authForm.$invalid">同意</button>
+      <button type="button" ng-click="isShowAgree = false" class="btn btn-default" ng-disabled="!refuseTxt">拒绝</button>
+    </div>
+  </form>
+</div>
+<div class="form-horizontal clearfix" ng-show="isShowPrint">
+  <div class="well col-md-6">
+    <table class="table table-condensed " ng-init='list=[{"sectionId":"print-wrap","title":"开卡申请单"},{"sectionId":"print-wrap1","title":"注册账户申请单"}]'>
+      <caption>打印列表</caption>
+      <tr>
+        <th>打印项</th>
+        <th>操作</th>
+      </tr>
+      <tr ng-repeat="l in list">
+        <td>{{($index+1) +"."+ l.title}}</td>
+        <td>
+          <button type="button" print-modal print-data='{{l}}' class="btn">打印</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
+
+<!--打印模板-->
+<!--<button class="btn-link" ng-click="printPreview('print-wrap','客户申请单')">打印</button>-->
+<div id="print-wrap" class="visible-print">
+  <div class="clearfix">
+    <h3 class="text-center">丝路国际银行</h3>
+    <table class="table text-left col-sm-10">
+      <caption>个人银行卡开卡凭证</caption>
+      <tr>
+        <td>交易代码:{{member.num}}</td>
+        <td>卡号:{{member.account}}</td>
+        <td>户名:{{member.name}}</td>
+      </tr>
+      <tr>
+        <td>网点:001</td>
+        <td>柜员号:0011</td>
+        <td>手机号码:{{member.tel}}</td>
+      </tr>
+      <tr>
+        <td colspan="3">本人已阅读并同意凭证背面的《客户须知》，确认上述打印内容与本人申请办理业务的内容一致。</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-right">客户签名:</td><td colspan="1"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="print-wrap1" class="visible-print">
+  <div class="well">注册账户申请单</div>
+  </div>

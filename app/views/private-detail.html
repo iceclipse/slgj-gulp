@@ -1,0 +1,125 @@
+<h3 class="slide-header">账户查询</h3>
+<form class="form-horizontal">
+  <!--默认获取-->
+  <div class="well">
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="100100" />
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户姓名</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="尓除橘儿·良儿顿·莱茵" />
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">凭证类型</label>
+        <div class="col-sm-7">
+          <select class="form-control">
+            <option value="">请选择</option>
+            <option value="1">储蓄卡</option>
+            <option value="2">存折</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">账号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="10000000000" />
+        </div>
+      </div>
+      <!--<div class="form-group col-sm-6">-->
+        <!--<label class="col-sm-4 control-label">卡号</label>-->
+        <!--<div class="col-sm-7">-->
+          <!--<input type="text" class="form-control"/>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">交易密码</label>
+        <div class="col-sm-7">
+          <input type="password" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-7">
+          <button type="button" class="btn btn-primary">查询</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</form>
+
+<div class="result-wrap">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-color1">
+        <div class="panel-heading">
+          <h3 class="panel-title">储蓄卡</h3>
+        </div>
+        <div class="panel-body no-padding text-align-center">
+          <div class="the-price">
+            <h1><span class="subscript">余额: </span>$12,222</h1>
+            <small>卡号:desc.</small>
+          </div>
+          <table class="table">
+            <tbody>
+            <tr class="active">
+              <td colspan="2">存款:</td>
+            </tr>
+            <tr>
+              <th>吉布提法郎:</th>
+              <td>$100,000</td>
+            </tr>
+            <tr>
+              <th>人民币:</th>
+              <td>100,000</td>
+            </tr>
+            <tr>
+              <th>美元:</th>
+              <td>$100,000</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer text-align-center">
+          <a ui-sref="private-balance" class="btn btn-block">查看流水</a>
+        </div>
+      </div>
+    </div>
+    <!--<div class="col-sm-4">-->
+      <!--<div class="panel panel-color2">-->
+        <!--<div class="panel-heading">-->
+          <!--<h3 class="panel-title">存折</h3>-->
+        <!--</div>-->
+        <!--<div class="panel-body no-padding text-align-center">-->
+          <!--<div class="the-price">-->
+            <!--<h1><span class="subscript">余额: </span>$12,222</h1>-->
+            <!--<small>账号:desc.</small>-->
+          <!--</div>-->
+          <!--<table class="table">-->
+            <!--<tbody>-->
+            <!--<tr class="active">-->
+              <!--<td colspan="2">存款:</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+              <!--<th>吉布提法郎:</th>-->
+              <!--<td>$100,000</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+          <!--</table>-->
+        <!--</div>-->
+        <!--<div class="panel-footer text-align-center">-->
+          <!--<a ui-sref="private-balance" class="btn btn-block">查看流水</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  </div>
+
+</div>

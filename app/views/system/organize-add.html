@@ -1,0 +1,118 @@
+<div class="widget">
+  <div class="widget-header bordered-bottom-1 bordered-blueberry"><h3 class="widget-caption">{{(organizeId ?
+    '修改机构信息':'添加机构信息')}}</h3></div>
+  <div class="widget-body">
+
+    <form class="form-horizontal">
+      <div class="form-group col-md-6" ng-show="organizeId">
+        <label class="col-sm-4 control-label"><em>*</em>机构编号</label>
+        <div class="col-md-8">
+          <p class="form-control-static">{{organizeId}}</p>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构名称</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.name" ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构简称</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.name" ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构状态</label>
+        <div class="col-md-8">
+          <select class="form-control" ng-model="organize.status" ng-hide="organizeVId">
+            <option ng-value="1" ng-selected="organize.status == 1">未激活</option>
+            <option ng-value="2" ng-selected="organize.status == 2">激活</option>
+          </select>
+          <input type="text" class="form-control" value="{{['','未激活','激活'][organize.status]}}" disabled
+                 ng-show="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构级别</label>
+        <div class="col-md-8">
+          <select class="form-control" ng-model="organize.level" ng-hide="organizeVId">
+            <option value="">请选择</option>
+            <option value="1" ng-selected="organize.level == 1">分行</option>
+            <option value="2" ng-selected="organize.level == 2">支行</option>
+          </select>
+          <input type="text" class="form-control" value="{{['总行','分行','支行'][organize.level]}}" disabled
+                 ng-show="organizeVId"/>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>所在地区</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-disabled="organizeVId" ng-model="organize.area"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构地址</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.address"
+                 ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>联系人</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.person"
+                 ng-disabled="organizeVId"/>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>联系电话</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.tel" ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>清算机构号</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.liquidationId"
+                 ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>地区编号</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.areaId"
+                 ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>处理网点</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.name" ng-disabled="organizeVId"/>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label class="col-md-4 control-label"><em>*</em>机构描述</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" placeholder="必填项" ng-model="organize.desc" ng-disabled="organizeVId"/>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-md-6">
+          <button type="button" class="btn btn-primary">提交</button>
+          <button type="button" class="btn btn-default">返回</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+<!--机构简称-->
+<!---->
+<!--机构级别-->
+<!--机构状态-->
+<!--操作-->

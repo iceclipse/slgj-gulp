@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>丝路国际银行</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--<meta http-equiv="Window-target" content="_top">-->
+  <meta name="robots" content="nofollow">
+  <!--content的参数有all,none,index,noindex,follow,nofollow，默认是all-->
+
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+  <!--网页不会被缓存-->
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+
+  <link href="styles/slgj.css" rel="stylesheet">
+  <link media="print" href="styles/print.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<!-- .hidden-menu -->
+<body ng-app="slgjApp">
+<!--[if lte IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+
+
+<div class="wrapper" ui-view>
+
+</div>
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/layout.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/dashboard.js"></script>
+
+<script src="scripts/directives/widget.js"></script>
+<script src="scripts/directives/sidebar.js"></script>
+<script src="scripts/directives/sx-tabs-tpls.js"></script>
+<script src="scripts/directives/sx-tabs.js"></script>
+<script src="scripts/directives/print.js"></script>
+
+<script src="scripts/controllers/open.js"></script>
+<script src="scripts/controllers/deposit.js"></script>
+<script src="scripts/controllers/draw.js"></script>
+<script src="scripts/controllers/transfer.js"></script>
+<script src="scripts/controllers/organize.js"></script>
+<script src="scripts/controllers/counter.js"></script>
+<script src="scripts/controllers/voucher.js"></script>
+<script src="scripts/controllers/personnel.js"></script>
+<script src="scripts/controllers/publicness.js"></script>
+<script src="scripts/controllers/cash.js"></script>
+
+<script src="scripts/services/services.js"></script>
+<script src="scripts/services/user.js"></script>
+<!-- endbuild -->
+</body>
+</html>

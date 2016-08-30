@@ -1,0 +1,74 @@
+<form class="row">
+  <div class="form-group col-sm-4">
+    <label class="control-label">客户号</label>
+    <input type="text" class="form-control"/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">账号</label>
+    <input type="text" class="form-control"/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">证件类型</label>
+
+    <select class="form-control">
+      <option value="">身份证</option>
+      <option value="">护照</option>
+    </select>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">证件号</label>
+
+    <input type="text" class="form-control"/>
+  </div>
+
+  <div class="form-group col-sm-8">
+    <label class="control-label">操作起至日期</label>
+    <div class="form-inline">
+      <input type="date" class="form-control date-input"/>
+      -
+      <input type="date" class="form-control date-input"/>
+    </div>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <button type="button" class="btn btn-primary">查询</button>
+  </div>
+</form>
+
+<table class="table table-bordered table-hover">
+  <caption>[张三的账户]开销户登记薄</caption>
+  <thead>
+  <tr>
+    <th>操作流水号</th>
+    <th>账号</th>
+    <th>户名</th>
+    <th>开户日期</th>
+    <th>操作类型</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>100000</td>
+    <td>100000</td>
+    <td>张三</td>
+    <td>2016-07-22</td>
+    <td>开户</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="text-right margin-top-10">
+  <uib-pagination
+    total-items="bigTotalItems"
+    ng-model="bigCurrentPage"
+    max-size="maxSize"
+    class="pagination-sm"
+    first-text="首页"
+    last-text="尾页"
+    previous-text="上一页"
+    next-text="下一页"
+    items-per-page="20"
+    boundary-links="true"
+    force-ellipses="true"></uib-pagination>
+</div>

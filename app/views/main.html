@@ -1,0 +1,49 @@
+<div class="row">
+ this is main
+  <p>1.{{ "PRINT" | translate }}directive </p>
+  <div class="" ng-init='list=[{"sectionId":"print-wrap","title":"page title"}]'>
+    <button type="button" print-modal print-data="{{l}}" class="btn" ng-repeat="l in list">{{ "PRINT" | translate }} {{l.title}}</button>
+  </div>
+
+
+
+  <!--打印模板-->
+  <!--<button class="btn-link" ng-click="printPreview('print-wrap','客户申请单')">打印</button>-->
+  <div id="print-wrap" class="visible-print">
+    <div class="clearfix">
+      <h3 class="text-center">丝路国际银行</h3>
+      <table class="table text-left col-sm-10">
+        <caption>个人银行卡开卡凭证</caption>
+        <tr>
+          <td>交易代码:{{member.num}}</td>
+          <td>卡号:{{member.account}}</td>
+          <td>户名:{{member.name}}</td>
+        </tr>
+        <tr>
+          <td>网点:001</td>
+          <td>柜员号:0011</td>
+          <td>手机号码:{{member.tel}}</td>
+        </tr>
+        <tr>
+          <td colspan="3">本人已阅读并同意凭证背面的《客户须知》，确认上述打印内容与本人申请办理业务的内容一致。</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-right">客户签名:</td><td colspan="1"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="print-wrap1" class="visible-print">
+    <div class="wekl">
+      <h3 class="text-center">print-wrap1 111111</h3>
+    </div>
+  </div>
+  <div id="print-wrap2" class="visible-print">
+    <div class="wekl">
+      <h3 class="text-center">print-wrap2 222222</h3>
+    </div>
+  </div>
+
+</div>
+

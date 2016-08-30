@@ -1,0 +1,87 @@
+<h4 class="widget-caption">对公客户管理</h4>
+    <form class="row">
+      <div class="form-group col-sm-4">
+        <label class="control-label">客户号</label>
+          <input type="text" class="form-control"/>
+      </div>
+      <div class="form-group col-sm-4">
+        <label class="control-label">账号</label>
+          <input type="text" class="form-control"/>
+      </div>
+      <div class="form-group col-sm-4">
+        <label class="control-label">证件类型</label>
+          <select class="form-control">
+            <option value="">营业执照</option>
+          </select>
+      </div>
+
+      <div class="form-group col-sm-4">
+        <label class="control-label">证件号</label>
+          <input type="text" class="form-control"/>
+      </div>
+
+      <div class="form-group col-sm-4">
+        <label class="control-label">户名</label>
+          <input type="text" class="form-control"/>
+      </div>
+      <div class="form-group col-sm-12">
+          <button type="button" class="btn btn-primary">查询</button>
+      </div>
+
+    </form>
+
+    <table class="table table-bordered table-hover table-striped">
+      <caption>[张三的账户]基本信息<a href ui-sref="publicness-add" class="btn btn-info pull-right">添加</a></caption>
+      <thead>
+      <tr>
+        <th>客户号</th>
+        <th>账号</th>
+        <th>户名</th>
+        <th>开户日期</th>
+        <th>证件类型</th>
+        <th>证件号</th>
+        <th>币种</th>
+        <th>余额</th>
+        <th>行业类型</th>
+        <th>法人姓名</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>100</td>
+        <td>100000</td>
+        <td>张三</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2016-07-22</td>
+        <td>人民币</td>
+        <td>300,000</td>
+        <td></td>
+        <td>激活</td>
+        <td>
+          <a href class="btn btn-sm btn-default" ui-sref="publicness-view({id:10001})">详情</a>
+          <a href class="btn btn-sm btn-info" ui-sref="publicness-view({id:10001})">修改</a>
+          <a href class="btn btn-sm btn-danger">删除</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+<div class="text-right margin-top-10">
+    <uib-pagination
+      total-items="bigTotalItems"
+      ng-model="bigCurrentPage"
+      max-size="maxSize"
+      class="pagination-sm"
+      first-text="首页"
+      last-text="尾页"
+      previous-text="上一页"
+      next-text="下一页"
+      items-per-page="20"
+      boundary-links="true"
+      force-ellipses="true"></uib-pagination>
+
+</div>

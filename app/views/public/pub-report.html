@@ -1,0 +1,79 @@
+<form class="row">
+
+  <!--默认获取-->
+  <div class="form-group col-sm-4">
+    <label class="control-label">客户账号 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" value="" />
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">户名</label>
+    <input type="text" disabled class="form-control" value="" />
+  </div>
+
+  <div class="col-sm-12"><div class="form-line"></div></div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">挂失标志 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">挂失</option>
+      <option value="1">撤销</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证种类 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">现金支票</option>
+      <option value="1">转账支票</option>
+      <option value="1">商业承兑汇票</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">批次 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" value="1300000" />
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">票据号码 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" value="1300000" />
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">票据金额 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" ng-value="10000" ng-model="money" />
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">票据日期 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <input type="text" class="form-control" value="" />
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">挂失事由</label>
+    <input type="text" class="form-control" value="" />
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">备注</label>
+    <input type="text" class="form-control" value="" />
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">收费金额</label>
+    <input type="text" class="form-control" value="" disabled />
+  </div>
+
+
+  <div class="form-group col-sm-12">
+    <button type="button" class="btn btn-primary">提交</button>
+    <!--提交后  进入 收费页面-->
+    <button type="reset" class="btn btn-default">重置</button>
+  </div>
+
+  <table class="table table-condensed ">
+    <caption>打印列表</caption>
+    <thead>
+    <tr>
+      <th>打印项</th><th>操作</th>
+    </tr>
+    </thead>
+    <tr><td>1.客户凭证挂失申请书</td><td><button class="btn-link" ng-click="printPreview('print-wrap','客户凭证挂失申请书')">打印</button></td></tr>
+    <tr><td>2.通用记账凭证</td><td><button class="btn-link">打印</button></td></tr>
+  </table>
+</form>

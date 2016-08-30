@@ -1,0 +1,89 @@
+<h3 class="slide-header">账户流水查询</h3>
+<form class="form-horizontal">
+  <!--默认获取-->
+  <div class="well">
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="100100" />
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">客户姓名</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" value="尓除橘儿·良儿顿·莱茵" />
+        </div>
+      </div>
+
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">账号</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">交易密码</label>
+        <div class="col-sm-7">
+          <input type="password" class="form-control"/>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">开始日期</label>
+        <div class="col-sm-7">
+          <input type="date" class="form-control"/>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label class="col-sm-4 control-label">结束日期</label>
+        <div class="col-sm-7">
+          <input type="date" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-7">
+          <button type="button" class="btn btn-primary">查询</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</form>
+
+<div class="result-wrap">
+  <table class="table table-bordered table-striped">
+    <caption>查询结果</caption>
+    <thead>
+    <tr>
+      <td>序号</td>
+      <td>账户号</td>
+      <td>子户号</td>
+      <td>对方账号</td>
+      <td>对方子户</td>
+      <td>币种</td>
+      <td>交易日期</td>
+      <td>交易类型</td>
+      <td>交易金额</td>
+      <td>余额</td>
+    </tr>
+    </thead>
+  </table>
+
+  <uib-pagination
+    total-items="bigTotalItems"
+    ng-model="bigCurrentPage"
+    max-size="maxSize"
+    class="pagination-sm"
+    first-text="首页"
+    last-text="尾页"
+    previous-text="上一页"
+    next-text="下一页"
+    items-per-page="20"
+    boundary-links="true"
+    force-ellipses="true"></uib-pagination>
+
+</div>

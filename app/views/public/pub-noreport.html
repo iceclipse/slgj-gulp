@@ -1,0 +1,58 @@
+<form class="row">
+
+  <!--默认获取-->
+      <div class="form-group col-sm-4">
+        <label class="control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+          <input type="text" class="form-control" value="10000000000" />
+      </div>
+      <div class="form-group col-sm-4">
+        <label class="control-label">户名</label>
+          <input type="text" disabled class="form-control" value="" />
+      </div>
+    </div>
+  </div>
+
+
+
+    <table class="table table-bordered table-hover table-striped">
+      <caption>[张三的账户]已挂失凭证列表<button type="button" class="btn btn-sm btn-primary pull-right">解挂</button></caption>
+      <thead>
+      <tr>
+        <th>选择</th>
+        <th>凭证号</th>
+        <th>批次</th>
+        <th>凭证类别</th>
+        <th>凭证种类</th>
+        <th>票据日期</th>
+        <th>备注</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="fa-text-width"><label><input type="checkbox"></label></td>
+        <td>00001</td>
+        <td>1</td>
+        <td>对公业务凭证</td>
+        <td>现金支票</td>
+        <td>2016-07-28</td>
+        <td>无</td>
+      </tr>
+      </tbody>
+    </table>
+
+  <div class="text-right margin-top-10">
+    <uib-pagination
+      total-items="bigTotalItems"
+      ng-model="bigCurrentPage"
+      max-size="maxSize"
+      class="pagination-sm"
+      first-text="首页"
+      last-text="尾页"
+      previous-text="上一页"
+      next-text="下一页"
+      items-per-page="20"
+      boundary-links="true"
+      force-ellipses="true"></uib-pagination>
+
+  </div>
+</form>

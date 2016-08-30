@@ -1,0 +1,80 @@
+<form class="row">
+  <!--默认获取-->
+  <div class="form-group col-sm-4">
+    <label class="control-label">客户账号(卡) <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">户名</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">款项账号</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">账户状态</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">产品名称</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">钞汇标志</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">余额</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">可用余额</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">币种</label>
+    <input type="text" disabled class="form-control" value=""/>
+  </div>
+  <div class="col-sm-12"><div class="form-line"></div></div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">交易类别 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <select class="form-control">
+      <option value="">现金</option>
+      <option value="">内部账转账</option>
+      <option value="">活期转账</option>
+      <option value="">转出挂帐</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">交易金额 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <input type="text" class="form-control" ng-value="0.00|currency:''"/>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证号码 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <input type="text" class="form-control" value=""/>
+  </div>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">摘要码 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <input type="text" class="form-control" value=""/>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">支现用途 <i class="fa fa-asterisk text-danger"></i></label>
+
+    <input type="text" class="form-control"/>
+  </div>
+
+
+  <div class="form-group col-sm-12 margin-top-10">
+    <button type="button" class="btn btn-primary">提交</button>
+    <button type="reset" class="btn btn-default">重置</button>
+  </div>
+  </div>
+</form>

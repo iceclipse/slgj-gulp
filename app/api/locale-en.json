@@ -1,0 +1,19 @@
+{
+  "TITLE":"Integrated counter management system",
+  "PRINT":"print",
+  "ACCOUNT":"account",
+  "ACCOUNTID":"account id",
+  "CREDENTIALSTYPE":"credentials type",
+  "CREDENTIALSID":"credentials id",
+  "SELECT":"select",
+  "NAME":"name",
+  "PASSWORD":"password",
+  "SEARCH":"search",
+  "ACCOUNTTYPE":"account type",
+  "SUBACCOUNT":"sub account",
+  "TEL":"tel",
+  "MATURITYTYPE":"maturity type",
+  "CURRENCY":"currency",
+  "SUBMIT":"submit",
+  "reset":"reset"
+}

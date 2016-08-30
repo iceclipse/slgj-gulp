@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打印</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <style type="text/css">
+    .table > tbody > tr > td, .table > tfoot > tr > td{
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+<div id="printSection">
+  <h3>loading...</h3>
+</div>
+<div class="hidden-print well">
+  <button class="btn btn-primary" onclick="reprint()">重新打印</button>
+  <button class="btn btn-default" onclick="end()">打印完成</button>
+</div>
+
+
+<script type="text/javascript">
+  var data = opener.getPrintSection();
+  console.log(data);
+  document.title = data.title;
+  document.getElementById('printSection').innerHTML = data.contents;
+  window.print();
+  //打印完成
+  function reprint() {
+    window.print();
+  }
+  function end() {
+    opener.printEnd();
+  }
+
+
+</script>
+</body>
+</html>

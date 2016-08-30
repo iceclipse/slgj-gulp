@@ -1,0 +1,88 @@
+<form class="row" name="form" novalidate  ng-hide="isShowPrint">
+    <div class="form-group col-sm-4">
+        <label class="control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" ng-model="account.id" ng-change="checkExist()" required /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">账户状态</label>
+        <input type="text" readonly class="form-control" ng-model="account.status" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">客户姓名</label>
+        <input type="text" disabled class="form-control" ng-model="account.name"/> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">证件类型</label>
+        <input type="text" disabled class="form-control"  ng-model="account.cardType"/> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">证件号码</label>
+        <input type="text" disabled class="form-control"  ng-model="account.cardNum" /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">电话号码</label>
+        <input type="text" disabled class="form-control"  ng-model="account.tel"/> </div>
+    <div class="form-group col-sm-12">
+        <div class="form-line"></div>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">币种 <i class="fa fa-asterisk text-danger"></i></label>
+        <select class="form-control" ng-model="account.currencyType">
+          <option value="">请选择</option>
+          <option value="1" ng-selected="account.currencyType==1">吉布提法郎</option>
+          <option value="2" ng-selected="account.currencyType==2">美元</option>
+          <option value="3" ng-selected="account.currencyType==3">人民币</option>
+        </select>
+    </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">金额 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="text" class="form-control" ng-model="account.money" required /> </div>
+    <div class="form-group col-sm-4">
+        <label class="control-label">密码 <i class="fa fa-asterisk text-danger"></i></label>
+        <input type="password" class="form-control" ng-model="account.password" required > </div>
+    <div class="form-group col-sm-12 margin-top-10">
+        <button type="button" class="btn btn-primary" ng-click="isShowPrint=true"  ng-disabled="form.$invalid"><i class="fa fa-check-circle"></i> 提交</button>
+        <button type="reset" class="btn btn-default"><i class="fa fa-history"></i> 重置</button>
+    </div>
+</form>
+
+
+<div class="clearfix" ng-show="isShowPrint">
+  <div class="well col-md-6">
+    <table class="table table-condensed " ng-init='list=[{"sectionId":"print-private-draw","title":"取款确认单"}]'>
+      <caption>打印列表</caption>
+      <tr>
+        <th>打印项</th>
+        <th>操作</th>
+      </tr>
+      <tr ng-repeat="l in list">
+        <td>{{($index+1) +"."+ l.title}}</td>
+        <td>
+          <button type="button" print-modal print-data='{{l}}' class="btn">打印</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<!--打印模板-->
+<div id="print-private-draw" class="visible-print">
+  <div class="clearfix">
+    <h3 class="text-center">丝路国际银行</h3>
+    <table class="table text-left col-sm-10">
+      <caption>取款确认单</caption>
+      <tr>
+        <td>交易代码:{{account.num}}</td>
+        <td>卡号:{{account.account}}</td>
+        <td>户名:{{account.name}}</td>
+      </tr>
+      <tr>
+        <td>网点:001</td>
+        <td>柜员号:0011</td>
+        <td>取款金额:{{account.money}}</td>
+      </tr>
+      <tr>
+        <td colspan="3">本人已阅读并同意凭证背面的《客户须知》，确认上述打印内容与本人申请办理业务的内容一致。</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-right">客户签名:</td><td colspan="1"></td>
+      </tr>
+    </table>
+  </div>
+</div>

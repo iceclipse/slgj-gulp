@@ -1,0 +1,59 @@
+<form class="row">
+  <!--默认获取-->
+  <div class="form-group col-sm-4">
+    <label class="control-label">账号 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" value="10000000000" />
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">户名</label>
+    <input type="text" disabled class="form-control" value="" />
+  </div>
+
+  <div class="form-group col-sm-12">
+    <div class="form-line"></div>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证类别 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">对公业务凭证</option>
+    </select>
+  </div>
+  <div class="form-group col-sm-4">
+    <label class="control-label">凭证种类 <i class="fa fa-asterisk text-danger"></i></label>
+    <select class="form-control">
+      <option value="">现金支票</option>
+      <option value="1">转账支票</option>
+    </select>
+  </div>
+
+
+  <div class="clearfix" ng-repeat="b in batchs">
+    <div class="form-group col-sm-4">
+      <label class="control-label">批次 <i class="fa fa-asterisk text-danger"></i></label>
+      <input type="text" class="form-control"/>
+    </div>
+    <div class="form-group col-sm-4  form-inline">
+      <label class="control-label">起止号码 <i class="fa fa-asterisk text-danger"></i></label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control date-input" ng-model="b.start"/>-<input type="text" class="form-control date-input" ng-model="b.end"/>
+        <button class="btn btn-sm btn-danger pull-right" ng-click="delBatch($index)" ng-if="$index>0">&times;</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group col-sm-4">
+    <label class="control-label">数量 <i class="fa fa-asterisk text-danger"></i></label>
+    <input type="text" class="form-control" ng-value="(end-start>-1?end-start+1:0)" disabled />
+  </div>
+  <div class="form-group col-sm-12">
+    <button class="btn btn-sm btn-info" ng-click="addBatch()">添加批次</button>
+  </div>
+
+  <div class="form-group col-sm-12">
+    <button type="button" class="btn btn-primary">提交</button>
+    <!--提交后  进入 收费页面-->
+    <button type="reset" class="btn btn-default">重置</button>
+  </div>
+</form>

@@ -1,0 +1,246 @@
+
+
+<!-- Page Sidebar Header-->
+<div class="sidebar-header-wrapper sidebar-fixed">
+  <input type="text" class="searchinput" />
+  <i class="searchicon fa fa-search"></i>
+  <div class="searchhelper">快速查找菜单</div>
+</div>
+<!-- /Page Sidebar Header -->
+<!-- Sidebar Menu -->
+<ul class="nav sidebar-menu" id="sidebar-menu">
+  <!--index-->
+  <li ng-repeat="menu in menuList | filter:{'level':1}:true" ng-class="{'active':currentTab.id==menu.id && menu.url}">
+    <a href ng-click="menuClick(menu)" class="menu-dropdown">
+      <i class="menu-icon fa {{menu.iconName}}"></i>
+      <span class="menu-text"> {{menu.name}} </span>
+      <i class="menu-expand" ng-if="!menu.url"></i>
+    </a>
+    <ul class="submenu" ng-if="!menu.url">
+      <li ng-repeat="secondMenu in menuList | filter:{'parentId':menu.id}:true" ng-class="{'active':currentTab.id==secondMenu.id && secondMenu.url}">
+        <a href class="menu-dropdown" ng-click="menuClick(secondMenu)">
+          <span class="menu-text"><i class="fa fa-circle"></i>{{secondMenu.name}}</span>
+          <i class="menu-expand" ng-if="!secondMenu.url"></i>
+        </a>
+        <ul class="submenu" ng-if="!secondMenu.url">
+          <li ng-repeat="thridMenu in menuList | filter:{'parentId':secondMenu.id}:true" ng-class="{'active':currentTab.id==thridMenu.id && thridMenu.url}">
+            <a href ng-click="menuClick(thridMenu)">{{thridMenu.name}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+
+
+  <!--<li ui-sref-active="active">-->
+    <!--<a ui-sref="app.dashboard">-->
+      <!--<i class="menu-icon fa fa-home"></i>-->
+      <!--<span class="menu-text"> 首页 </span>-->
+    <!--</a>-->
+  <!--</li>-->
+
+
+
+  <!--个人业务-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-male"></i>-->
+      <!--<span class="menu-text"> 个人业务 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li>-->
+        <!--<a href class="menu-dropdown">-->
+          <!--<span class="menu-text"><i class="fa fa-circle"></i>个人查询业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li><a href="#/app/private-detail">账户查询</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href class="menu-dropdown">-->
+          <!--<span class="menu-text"><i class="fa fa-circle"></i>存款业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-open">开卡</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href class="menu-dropdown">-->
+          <!--<span class="menu-text"><i class="fa fa-circle"></i>个人特殊业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-exchange">换卡</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-report">挂失</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-noreport">撤挂</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-freeze">冻结</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.private-unfreeze">解冻</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+
+      <!--<li>-->
+        <!--<a href class="menu-dropdown">-->
+          <!--<span class="menu-text"><i class="fa fa-circle"></i>其他业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a>当日业务冲正</a></li>-->
+          <!--<li ui-sref-active="active"><a>客户账号调整</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--对公业务-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-building"></i>-->
+      <!--<span class="menu-text"> 对公业务 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li>-->
+        <!--<a href="#" class="menu-dropdown">-->
+          <!--<span class="menu-text">账户管理</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-open" href>活期存款开户</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-cancellation" href>活期存款销户</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-freeze" href>账户冻结</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-unfreeze" href>账户解冻</a></li>-->
+          <!--&lt;!&ndash;<li ui-sref-active="active"><a ui-sref="app.public-user" href>账户一般信息修改</a></li>&ndash;&gt;-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" class="menu-dropdown">-->
+          <!--&lt;!&ndash;<i class="menu-icon fa fa-table"></i>&ndash;&gt;-->
+          <!--<span class="menu-text">对公活期业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-deposit" href>活期存款存入</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.public-draw" href>活期存款支取</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" class="menu-dropdown">-->
+          <!--&lt;!&ndash;<i class="menu-icon fa fa-table"></i>&ndash;&gt;-->
+          <!--<span class="menu-text">客户凭证管理</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-buy" href>凭证出售</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-report" href>客户凭证挂失</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-noreport" href>客户凭证解挂</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-invalid" href>客户凭证作废</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-status" href>凭证状态恢复</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.pub-check" href>凭证使用情况查询</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a href="#" class="menu-dropdown">-->
+          <!--&lt;!&ndash;<i class="menu-icon fa fa-table"></i>&ndash;&gt;-->
+          <!--<span class="menu-text">查询业务</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.find-base" href>账户基本信息查询</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.dashboard" href>账户满账页查询</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.dashboard" href>账户未满帐页查询</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.find-register" href>开销户登记簿查询</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.find-register-freeze" href>冻结登记簿查询</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</li>-->
+
+  <!--客户管理-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-users"></i>-->
+      <!--<span class="menu-text"> 客户管理 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.personnel-add" href>添加个人客户</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.publicness-add" href>添加对公客户</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.personnel" href>个人客户管理</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.publicness" href>对公客户管理</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--现金管理-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-money"></i>-->
+      <!--<span class="menu-text"> 现金管理 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.cash-out">现金出库</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.cash-in">现金入库</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.cash-reallocation">现金调剂</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.cash-count">现金碰库</a></li>-->
+      <!--<li>-->
+        <!--<a href="#" class="menu-dropdown">-->
+          <!--&lt;!&ndash;<i class="menu-icon fa fa-table"></i>&ndash;&gt;-->
+          <!--<span class="menu-text">查询</span>-->
+          <!--<i class="menu-expand"></i>-->
+        <!--</a>-->
+        <!--<ul class="submenu">-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-tillbalance" href>尾箱余额查询</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-tilltype" href>尾箱卷别查询/打印</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-outin" href>出入库查询/打印</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-reallocation" href>调配查询/打印</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-payment" href>收付查询/打印</a></li>-->
+          <!--<li ui-sref-active="active"><a ui-sref="app.get-tillprint" href>尾箱结存查询打印</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--凭证管理-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-cc-mastercard"></i>-->
+      <!--<span class="menu-text"> 凭证管理 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.voucher-out">凭证出库</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.voucher-in">凭证入库</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.voucher-reallocation">凭证调剂</a></li>-->
+      <!--<li ui-sref-active="active"><a href ui-sref="app.voucher-replace">凭证补登</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--账务管理-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-area-chart"></i>-->
+      <!--<span class="menu-text"> 账务管理 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li ui-sref-active="active"><a href>a</a></li>-->
+      <!--<li ui-sref-active="active"><a href>b</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+  <!--系统设置-->
+  <!--<li>-->
+    <!--<a href="#" class="menu-dropdown">-->
+      <!--<i class="menu-icon fa fa-cog"></i>-->
+      <!--<span class="menu-text"> 系统设置 </span>-->
+      <!--<i class="menu-expand"></i>-->
+    <!--</a>-->
+    <!--<ul class="submenu">-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.organize" href>机构管理</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.role" href>角色管理</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.counter" href>柜员管理</a></li>-->
+      <!--<li ui-sref-active="active"><a ui-sref="app.dashboard" href>重置柜员密码</a></li>-->
+    <!--</ul>-->
+  <!--</li>-->
+
+</ul>
+<!-- /Sidebar Menu -->

@@ -1,0 +1,38 @@
+<form class="row">
+    <div class="panel clearfix">
+        <input name="a" class="hidden">
+        <input type="password" class="hidden">
+        <div class="form-group col-sm-4">
+            <label class="control-label">账号</label>
+            <input type="text" class="form-control" /> </div>
+        <div class="form-group col-sm-4">
+            <label class="control-label">交易密码</label>
+            <input type="password" class="form-control"> </div>
+        <div class="form-group col-sm-4">
+            <label class="control-label">开始日期</label>
+            <input type="date" class="form-control" /> </div>
+        <div class="form-group col-sm-4">
+            <label class="control-label">结束日期</label>
+            <input type="date" class="form-control" /> </div>
+        <div class="form-group col-sm-12 margin-top-10">
+            <button type="button" class="btn btn-primary">查询</button>
+        </div>
+    </div>
+</form>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>交易日期1</th>
+            <th>明细流水号</th>
+            <th>子户号</th>
+            <th>币种</th>
+            <th>交易类型</th>
+            <th>(+/-)交易金额</th>
+            <th>余额</th>
+            <th>摘要</h>
+        </tr>
+    </thead>
+</table>
+<div class="text-right margin-top-10">
+    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" first-text="首页" last-text="尾页" previous-text="上一页" next-text="下一页" items-per-page="20" boundary-links="true" force-ellipses="true"></uib-pagination>
+</div>

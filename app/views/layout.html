@@ -1,0 +1,187 @@
+<!-- START Top Navbar-->
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner ng-scope">
+    <div class="navbar-container clearfix">
+      <!-- Navbar Barnd  logo-compact-->
+      <div class="navbar-header pull-left">
+        <a href="#" class="navbar-logo" id="logo-compact">
+          <img src="../images/logo.png" class="logo">
+          <img src="../images/logo-mini.png" class="logo-min">
+        </a>
+      </div>
+      <!-- /Navbar Barnd -->
+      <!-- Sidebar Collapse -->
+      <div class="pro-name-wrap clearfix">
+        <a class="pull-left page-tools page-collapse" href sidebar-collapse><i class="fa fa-bars"></i></a>
+        <a class="pull-left page-tools page-lock" href><i class="fa fa-lock"></i></a>
+        <h2 class="pull-left pro-name margin-left-20" translate="TITLE"></h2>
+      </div>
+
+
+      <!-- /Sidebar Collapse -->
+      <!-- Account Area and Settings --->
+      <div class="navbar-header pull-right">
+        <div class="navbar-account">
+          <ul class="account-area">
+            <li uib-dropdown>
+              <a class="dropdown-toggle" uib-dropdown-toggle href >
+                <i class="icon fa fa-language"></i>
+              </a>
+              <!--Messages Dropdown-->
+              <ul class="pull-right dropdown-menu">
+                <li><a href ng-click="changeLang('en')"><span>English</span></a></li>
+                <li><a href ng-click="changeLang('zh')"><span>中文</span></a></li>
+                <li><a href ng-click="changeLang('fr')"><span>Français</span></a></li>
+              </ul>
+              <!--/Messages Dropdown-->
+            </li>
+
+
+            <li uib-dropdown>
+              <a class="dropdown-toggle" uib-dropdown-toggle title="Mails" href >
+                <i class="icon fa fa-envelope"></i>
+                <span class="badge">1</span>
+              </a>
+              <!--Messages Dropdown-->
+              <ul class="pull-right dropdown-menu dropdown-messages">
+                <li>
+                  <a href="#">
+                    <img src="../images/man.jpg" class="message-avatar" alt="Divyia Austin">
+                    <div class="message">
+                      <span class="message-sender">张三</span>
+                      <span class="message-time">2 分钟前</span>
+                      <span class="message-subject">标题</span>
+                      <span class="message-body">详情</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!--/Messages Dropdown-->
+            </li>
+
+            <li uib-dropdown>
+              <a class="dropdown-toggle" title="Tasks" href uib-dropdown-toggle>
+                <i class="icon fa fa-tasks"></i>
+                <span class="badge">2</span>
+              </a>
+              <!--Tasks Dropdown-->
+              <ul class="pull-right dropdown-menu dropdown-tasks ">
+                <li class="dropdown-header"><i class="fa fa-tasks"></i>2个待处理任务</li>
+                <li>
+                  <a href="#">
+                    <div class="clearfix">
+                      <span class="pull-left">1.待授权</span>
+                      <span class="pull-right">65%</span>
+                    </div>
+                    <div class="progress-xs progress ng-isolate-scope" value="65">
+                      <div class="progress-bar" style="width: 65%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="clearfix">
+                      <span class="pull-left">2.待授权</span>
+                      <span class="pull-right">35%</span>
+                    </div>
+                    <div class="progress-xs progress ng-isolate-scope" type="success" value="35">
+                      <div class="progress-bar progress-bar-success" style="width: 35%;"></div>
+                    </div>
+                  </a>
+                </li>
+                <li class="dropdown-footer">
+                  <a href="#" class="block-center">
+                    查看全部
+                  </a>
+                </li>
+              </ul>
+              <!--/Tasks Dropdown-->
+            </li>
+            <li uib-dropdown>
+              <a class="login-area dropdown-toggle" href uib-dropdown-toggle>
+                <div class="avatar" title="View your public profile">
+                  <img src="images/man.jpg">
+                </div>
+                <section>
+                  <h2><span class="profile"><span>张A <em class="fa fa-angle-down"></em></span></span></h2>
+                </section>
+              </a>
+              <!--Login Area Dropdown-->
+              <ul class="pull-right dropdown-menu dropdown-login-area">
+                <li class="username"><a>张A</a></li>
+                <li class="email"><a>zhanga@live.com</a></li>
+                <!--Avatar Area-->
+                <li>
+                  <div class="avatar-area">
+                    <img src="images/man.jpg" class="avatar">
+                    <span class="caption">Change Photo</span>
+                  </div>
+                </li>
+                <!--Avatar Area-->
+                <li class="edit">
+                  <a href class="pull-left">个人资料</a>
+                  <a href="#" class="pull-right">设置</a>
+                </li>
+                <!--Theme Selector Area-->
+                <!--<li class="theme-area">-->
+                <!--<ul class="colorpicker">-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#53a93f;" skin-changer=""-->
+                <!--rel="assets/css/skins/green.min.css"></a></li>-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#FF8F32;" skin-changer=""-->
+                <!--rel="assets/css/skins/orange.min.css"></a></li>-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#cc324b;" skin-changer=""-->
+                <!--rel="assets/css/skins/pink.min.css"></a></li>-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#AC193D;" skin-changer=""-->
+                <!--rel="assets/css/skins/darkred.min.css"></a></li>-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#0072C6;" skin-changer=""-->
+                <!--rel="assets/css/skins/darkblue.min.css"></a></li>-->
+                <!--<li><a class="colorpick-btn" href="" style="background-color:#001940;" skin-changer=""-->
+                <!--rel="assets/css/skins/deepblue.min.css"></a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <!--/Theme Selector Area-->
+                <li class="dropdown-footer">
+                  <a ui-sref="login">
+                    注销
+                  </a>
+                </li>
+              </ul>
+              <!--/Login Area Dropdown-->
+            </li>
+            <!-- /Account Area -->
+            <!--Note: notice that setting div must start right after account area list.
+            no space must be between these elements-->
+            <!-- Settings -->
+          </ul>
+          <!-- Settings -->
+        </div>
+      </div>
+      <!-- /Account Area and Settings -->
+    </div>
+  </div>
+</div>
+
+
+<div class="main-container container-fluid">
+  <div class="page-container">
+    <!--page-sidebar-->
+    <div class="page-sidebar sidebar-fixed" sidebar-menu add-tab-fn="addTabFn(tab)" tab-list="tabList(list)" id="sidebar">
+
+    </div>
+    <!--page-sidebar end-->
+
+    <!--page-content  resize-->
+    <div class="page-content" resize>
+      <div ui-view class="page-body">
+      </div>
+    </div>
+    <!--page-content end-->
+  </div>
+</div>
+
+
+<!--<div class="footer">-->
+  <!--<div class="container-fluid">-->
+    <!--<p><span class="glyphicon glyphicon-heart"></span> 版权所有 &copy; 丝路亿商 2016</p>-->
+  <!--</div>-->
+<!--</div>-->

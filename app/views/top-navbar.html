@@ -1,0 +1,212 @@
+<div class="color-line"></div>
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="index.html">
+      <!--丝路银行系统-->
+      <img src="images/logo.png" alt="">
+    </a>
+  </div>
+  <!-- Top Menu Items -->
+  <ul class="nav navbar-right top-nav">
+    <li uib-dropdown>
+      <a href class="dropdown-toggle" id="envelope-dropdown" uib-dropdown-toggle><i class="fa fa-envelope"></i> <b
+        class="caret"></b></a>
+      <ul class="dropdown-menu message-dropdown" uib-dropdown-menu aria-labelledby="envelope-dropdown">
+        <li class="message-preview">
+          <a href="#">
+            <div class="media">
+                      <span class="pull-left">
+                          <img class="media-object" src="http://placehold.it/50x50" alt="">
+                      </span>
+              <div class="media-body">
+                <h5 class="media-heading"><strong>张三</strong>
+                </h5>
+                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="message-footer">
+          <a href="#">更多</a>
+        </li>
+      </ul>
+    </li>
+    <li uib-dropdown>
+      <a href class="dropdown-toggle" id="bell-dropdown" uib-dropdown-toggle><i class="fa fa-bell"></i> <b
+        class="caret"></b></a>
+      <ul class="dropdown-menu alert-dropdown" uib-dropdown-menu aria-labelledby="bell-dropdown">
+        <li>
+          <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <a href="#">View All</a>
+        </li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href class="dropdown-toggle" id="self-dropdown" uib-dropdown-toggle>
+        <i class="fa fa-user"></i> 张三 <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="self-dropdown">
+        <li><a href="#"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-envelope"></i> 消息</a></li>
+        <li><a href="#"><i class="fa fa-fw fa-gear"></i> 设置</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="fa fa-fw fa-power-off"></i> 退出</a></li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+  <ul class="nav navbar-nav">
+    <li uib-dropdown>
+      <a href id="private-dropdown" uib-dropdown-toggle>个人业务 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="private-dropdown">
+        <li><a ui-sref="private-detail">账户查询</a></li>
+        <li><a ui-sref="private-balance">账户明细查询</a></li>
+        <li><a ui-sref="private-open">开卡</a></li>
+        <li><a ui-sref="private-open-book">开折</a></li>
+        <li><a ui-sref="private-deposit">存款</a></li>
+        <li><a ui-sref="private-draw">取款</a></li>
+        <li><a ui-sref="private-transfer">转账</a></li>
+        <li><a ui-sref="private-exchange">换卡</a></li>
+        <li><a ui-sref="private-exchange-book">换折</a></li>
+        <li><a ui-sref="private-report">挂失</a></li>
+        <li><a ui-sref="private-noreport">解挂</a></li>
+        <li><a ui-sref="private-freeze">冻结</a></li>
+        <li><a ui-sref="private-unfreeze">解冻</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="change-pwd">修改密码</a></li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href id="public-dropdown" uib-dropdown-toggle>对公业务 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="public-dropdown">
+        <li><a href>账户管理<i class="fa fa-fw fa-caret-right"></i></a>
+          <ul class="dropdown-second-menu">
+            <li><a ui-sref="public-open" href>活期存款开户</a></li>
+            <li><a ui-sref="public-cancellation" href>活期存款销户</a></li>
+            <li><a ui-sref="public-freeze" href>账户冻结</a></li>
+            <li><a ui-sref="public-unfreeze" href>账户解冻</a></li>
+            <li><a ui-sref="public-user" href>账户一般信息修改</a></li>
+          </ul>
+        </li>
+        <li><a href>对公活期业务<i class="fa fa-fw fa-caret-right"></i></a>
+          <ul class="dropdown-second-menu">
+            <li><a ui-sref="public-deposit" href>活期存款存入</a></li>
+            <li><a ui-sref="public-draw" href>活期存款支取</a></li>
+          </ul>
+        </li>
+        <li><a href>客户凭证管理<i class="fa fa-fw fa-caret-right"></i></a>
+          <ul class="dropdown-second-menu">
+            <li><a ui-sref="pub-buy" href>凭证出售</a></li>
+            <li><a ui-sref="pub-report" href>客户凭证挂失</a></li>
+            <li><a ui-sref="pub-noreport" href>客户凭证解挂</a></li>
+            <li><a ui-sref="pub-invalid" href>客户凭证作废</a></li>
+            <li><a ui-sref="pub-status" href>凭证状态恢复</a></li>
+            <!--<li><a ui-sref="pub-check" href>凭证使用情况查询</a></li>-->
+          </ul>
+        </li>
+        <li><a href>查询业务<i class="fa fa-fw fa-caret-right"></i></a>
+          <ul class="dropdown-second-menu">
+            <li><a ui-sref="find-base" href>账户基本信息查询</a></li>
+            <!--<li><a ui-sref="main" href>账户满账页查询</a></li>-->
+            <!--<li><a ui-sref="main" href>账户未满帐页查询</a></li>-->
+            <li><a ui-sref="find-register" href>开销户登记簿查询</a></li>
+            <li><a ui-sref="find-register-freeze" href>冻结登记簿查询</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href id="customer-dropdown" uib-dropdown-toggle>客户管理 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="customer-dropdown">
+        <li><a ui-sref="personnel-add" href>添加个人客户</a></li>
+        <li><a ui-sref="publicness-add" href>添加对公客户</a></li>
+        <li><a ui-sref="personnel" href>个人客户管理</a></li>
+        <li><a ui-sref="publicness" href>对公客户管理</a></li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href id="cash-dropdown" uib-dropdown-toggle>现金管理 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="cash-dropdown">
+        <li><a href ui-sref="cash-out">现金出库</a></li>
+        <li><a href ui-sref="cash-in">现金入库</a></li>
+        <li><a href ui-sref="cash-reallocation">现金调剂</a></li>
+        <li><a href ui-sref="cash-count">现金碰库</a></li>
+        <li>
+          <a href>查询<i class="fa fa-fw fa-caret-right"></i></a>
+          <ul class="dropdown-second-menu">
+            <li><a ui-sref="get-tillbalance" href>尾箱余额查询</a></li>
+            <li><a ui-sref="get-tilltype" href>尾箱卷别查询/打印</a></li>
+            <li><a ui-sref="get-outin" href>出入库查询/打印</a></li>
+            <li><a ui-sref="get-reallocation" href>调配查询/打印</a></li>
+            <li><a ui-sref="get-payment" href>收付查询/打印</a></li>
+            <li><a ui-sref="get-tillprint" href>尾箱结存查询打印</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href id="license-dropdown" uib-dropdown-toggle>凭证管理 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="license-dropdown">
+        <li><a href ui-sref="voucher-out">凭证出库</a></li>
+        <li><a href ui-sref="voucher-in">凭证入库</a></li>
+        <li><a href ui-sref="voucher-reallocation">凭证调剂</a></li>
+        <li><a href ui-sref="voucher-replace">凭证补登</a></li>
+      </ul>
+    </li>
+    <li uib-dropdown>
+      <a href id="accountant-dropdown" uib-dropdown-toggle>对公业务 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu col-menu-2" style="width: 400px;">
+        <li class="col-sm-6 no-padding">
+          <ul>
+            <li class="dropdown-header"><i class="fa fa-group"></i>账户管理</li>
+            <li><a ui-sref="public-open" href>活期存款开户</a></li>
+            <li><a ui-sref="public-cancellation" href>活期存款销户</a></li>
+            <li><a ui-sref="public-freeze" href>账户冻结</a></li>
+            <li><a ui-sref="public-unfreeze" href>账户解冻</a></li>
+            <li><a ui-sref="public-user" href>账户一般信息修改</a></li>
+            <li class="dropdown-header"><i class="fa fa-gear"></i>对公活期业务</li>
+            <li><a ui-sref="public-deposit" href>活期存款存入</a></li>
+            <li><a ui-sref="public-draw" href>活期存款支取</a></li>
+          </ul>
+        </li>
+        <li class="col-sm-6 no-padding">
+          <ul>
+            <li class="dropdown-header"><i class="fa fa-legal"></i>客户凭证管理</li>
+            <li><a ui-sref="pub-buy" href>凭证出售</a></li>
+            <li><a ui-sref="pub-report" href>客户凭证挂失</a></li>
+            <li><a ui-sref="pub-noreport" href>客户凭证解挂</a></li>
+            <li><a ui-sref="pub-invalid" href>客户凭证作废</a></li>
+            <li><a ui-sref="pub-status" href>凭证状态恢复</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li uib-dropdown>
+      <a href id="system-dropdown" uib-dropdown-toggle>系统设置 <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="system-dropdown">
+        <li><a ui-sref="organize" id="system1-dropdown" href>机构管理</a></li>
+        <li><a ui-sref="role" href>角色管理</a></li>
+        <li><a ui-sref="counter" href>柜员管理</a></li>
+        <li><a ui-sref="main" href>重置柜员密码</a></li>
+      </ul>
+    </li>
+
+  </ul>
+  <!-- /.navbar-collapse -->
+
+
+</div>
+
